@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>เข้าสู่ระบบ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-amber-50 min-h-screen flex items-center justify-center">
+
+<div class="bg-white p-8 rounded-xl shadow-xl w-full max-w-md">
+  <h1 class="text-2xl font-bold text-center mb-6 text-amber-900">
+    ระบบขอลากลับบ้าน
+  </h1>
+
+  <select id="role" class="w-full border p-3 rounded mb-4">
+    <option value="student">นักเรียน</option>
+    <option value="staff">ครู / บุคลากร</option>
+  </select>
+
+  <div id="student-box">
+    <input id="student_id" class="w-full border p-3 rounded mb-2" placeholder="เลขประจำตัวนักเรียน">
+    <input id="citizen_id" class="w-full border p-3 rounded" placeholder="เลขบัตรประชาชน">
+  </div>
+
+  <div id="staff-box" class="hidden">
+    <input id="username" class="w-full border p-3 rounded mb-2" placeholder="Username">
+    <input id="password" type="password" class="w-full border p-3 rounded" placeholder="Password">
+  </div>
+
+  <button onclick="login()" class="w-full bg-amber-500 text-white py-3 rounded font-semibold mt-4">
+    เข้าสู่ระบบ
+  </button>
+
+  <p id="error" class="text-red-500 text-center mt-3"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
